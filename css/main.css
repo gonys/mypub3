@@ -1,0 +1,84 @@
+@font-face {font-family: "lexi";src:url("../font/lexi.woff")}
+@font-face {font-family: "woori";src:url("../font/woori.woff")}
+@font-face {font-family: "dek";src:url("../font/dekar.woff")}
+body{font-family:woori;margin:0;padding:0;}
+html, body, div, span, object,
+form, input, h1, h2, button, label, a, img {
+    font-family: woori;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /* this will work for QtWebKit in future */
+    -webkit-user-drag: none;
+}
+input:focus, select:focus,  textarea:focus,   button:focus {
+outline: none;
+}
+
+/* 탑메뉴*/
+#top{height:46px;border-bottom:1px solid #dddddd; background-color:#f4f4f4;position:fixed;width:100%;z-index:10; }
+#topmenuwrap{width:940px; height:47px;margin:auto;position:relative}
+.menu{margin:0 10px; padding:2px 10px; height:47px;float:left;line-height:42px;color:#777777;cursor:hand}
+.menu:hover{color:#000;}
+#more{margin:0 13px; padding:2px 13px; height:47px;float:left;line-height:42px;color:#777777;cursor:hand;overflow:visible;}
+#more:hover{color:#000;}
+.morenonclicked{background-size: 13px;background-repeat: no-repeat;background-position: right 17px;background-image:url(../icon/more.png);}
+.morenonclicked:hover{background-size: 13px;background-repeat: no-repeat;background-position: right 17px;background-image:url(../icon/more2.png);}
+.moreclicked{background-size: 13px;background-repeat: no-repeat;background-position: right 17px;background-image:url(../icon/more3.png); color:#000;}
+.moreclicked:hover{background-size: 13px;background-repeat: no-repeat;background-position: right 17px;background-image:url(../icon/more3.png);}
+#iconbox{float:right;height:46px}
+
+/* 서치창*/
+#sch{float:right;cursor:hand;height:30px;margin:8px  4px;background:none;padding-left:25px;padding-top: 5px;padding-bottom: 5px;
+    background-image:url(../icon/sch.png);background-size:20px;background-repeat: no-repeat;background-position: 3px; border:none;border-radius: 5px;
+    -webkit-transition:0.5s; /* For Safari 3.1 to 6.0 */
+    transition:0.5s; width:25px;}
+#sch:hover{background-image: url(../icon/sch1.png)}
+#sch:active,#sch:focus{width:150px;background-color: #FFF; border: 1px solid #dddddd;}
+
+/* 뉴*/
+#new{float:right;cursor:hand;height:30px;margin: 8px  4px;background:none;
+    background-image:url(../icon/new.png);background-size:20px;background-repeat: no-repeat;background-position: 3px; border:none;border-radius: 5px;
+    -webkit-transition:0.5s; /* For Safari 3.1 to 6.0 */
+    transition:0.5s; width:25px;}
+#new:active,#new:focus, #new:hover{background-image: url(../icon/new1.png)}
+
+/* 내프로필*/
+#me{color:#777777;float:right;cursor:hand;height:30px;margin: 8px  4px;background:none;
+    background-image:url(../icon/profile.png);background-size:30px;background-repeat: no-repeat;background-position: 3px; border:none;border-radius: 5px;
+    -webkit-transition:0.5s; /* For Safari 3.1 to 6.0 */
+    transition:0.5s; line-height: 30px; width:90px;padding-left:38px;}
+#me:active,#me:focus, #me:hover{background-image: url(../icon/profile.png);color:#000;}
+
+
+/* 팝업*/
+.popup ul{
+position:absolute;
+list-style-type: none;
+overflow: hidden;
+padding: 5px 0;
+background-color: #fff;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+border: 1px solid #ccc;}
+.popup li{color:#777777;}
+.popup li:hover{color:#000;background-color:#f4f4f4}
+
+/* 그룹팝업*/
+#moregroups{ margin-top:-20px;}
+#moregroups li{padding:0px 10px;width:100px;}
+/* 프로로필팝업*/
+#myprofile{margin-top:-14px;margin-left:-50px;}
+#myprofile li{padding:0px 10px;width:100px;line-height:42px;}
+/* new*/
+#newpopup{ margin-top:16px;margin-left:-170px;}
+#newpopup li{padding:0px 10px;width:180px;line-height:42px;}
+
+
+
+/* 본문 */
+#topblock{width:100%;height:47;clear:both;}
+#container{width:100%;}
+
+/* 네임스페이스*/
+#namespace{height:43px;border-bottom:1px solid #dddddd;width:100%; line-height: 43px;color:#777777 }
+#namewrap{width:940px; height:50px;margin:auto;position:relative}
+

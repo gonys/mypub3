@@ -1,0 +1,98 @@
+<meta charset="utf-8" />
+<link  type='text/css' rel='stylesheet' href='css/main.css' media='screen' />
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function() {
+    $(".popup").hide();
+    $('#more').click(function(){
+        $(this).toggleClass("moreclicked")
+    });
+
+});
+
+function showID(showid) {
+    $('#'+showid).show();
+}
+function hideID(hideid){
+    $('#'+hideid).hide();
+}
+function toggleID(toggleid){
+        $('.popup').not('#'+toggleid).hide();
+        $('#'+toggleid).toggle();
+}
+
+</script>
+
+<div id='top'>
+    <div id='topmenuwrap'>
+
+        <div id='menubox'>
+            <a class='menu'>그룹1</a>
+            <a class='menu'>그룹2</a>
+            <a class='menu'>그룹3</a>
+            <a class='menu'>그룹4</a>
+            <a id='more' class='morenonclicked' style='width:55px;' onclick="toggleID('moregroups');">더보기 &nbsp
+                <div class='popup' id='moregroups'>
+                    <ul>
+                        <li>
+                           그룹5
+                        </li>
+                        <li>
+                           그룹6
+                        </li>
+
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div id='iconbox'>
+            <a id='me'  onclick="toggleID('myprofile');">내 프로필
+                    <div class='popup' id='myprofile'>
+                        <ul>
+                            <li>
+                                그룹5
+                            </li>
+                            <li>
+                                그룹6
+                            </li>
+
+                        </ul>
+                    </div>
+            </a>
+
+            <a id='new'  onclick="toggleID('newpopup');">
+                <div class='popup' id='newpopup'>
+                    <ul>
+                        <li>
+                            그룹5
+                        </li>
+                        <li>
+                            그룹6
+                        </li>
+
+                    </ul>
+                </div>
+            </a>
+            <input id='sch' placeholder="Search…">
+
+        </div>
+    </div>
+
+</div>
+
+
+        <div id='container'>
+        <div id='topblock'></div>
+        <div id='namespace'>
+            <div id='namewrap'>
+               안녕하세요. 박성호님 1번그룹입니다.     이 그룹의 친구목록 그룹설정
+
+
+            </div>
+
+
+        </div>
+        </div>
+
+
