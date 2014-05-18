@@ -10,6 +10,7 @@ form, input, h1, h2, button, label, a, img {
     /* this will work for QtWebKit in future */
     -webkit-user-drag: none;
 }
+textarea{border:none;font-family: woori;resize:none;overflow:hidden;}
 input:focus, select:focus,  textarea:focus,   button:focus {
 outline: none;
 }
@@ -103,9 +104,11 @@ border: 1px solid #ccc;}
 
 /*아티클*/
 .letter, .photo{border-bottom:1px solid #dddddd;width:750px;position:relative;padding-top:10px;padding-bottom:20px;overflow:auto; }
-.title{font-weight: 900;}
-.date{color:#777777;margin-top:-15px;font-size:12px;padding-left:15px;}
-.left{width:520px;float:left;position:relative}
+.title{font-weight: 900;width:500;font-size:30px;cursor:default;}
+.body{width:500px;font-size:15px;cursor:default;}
+
+.date{color:#777777;font-size:12px;padding-left:15px;}
+.left{width:520px;float:left;position:relative;overflow:hidden;}
 
 
 /*리플*/
@@ -125,9 +128,6 @@ border: 1px solid #ccc;}
 
 /*포인트와 작성자*/
 .right{width:230px;float:left;position:relative;padding-top:20px;}
-.writer{background:url(../icon/sch.png) no-repeat;background-size:30px;line-height: 40px;height:40px;background-position:top right;width:150px;margin-right:10px;}
-.pointbtnsym{border:1px solid #dddddd;border-radius:3px 0px 0px 3px;padding:5px 10px}
-.pointbtnwow{border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;border-radius:0px;padding:5px 12px;}
-.pointbtnhum{border:1px solid #dddddd;border-radius:0px 3px 3px 0px;padding:5px 10px}
-.pointbtnwow,.pointbtnsym,.pointbtnhum{color:#777777;float:left;cursor:hand;}
-.pointbtnwow:hover,.pointbtnsym:hover,.pointbtnhum:hover{color:#000;}
+.writer{width:150px;margin-right:10px;}
+.pointbtn{color:#777777;cursor:hand;margin-left: 15px;}
+.pointbtn:hover{color:#000;}

@@ -2,8 +2,13 @@
 <link  type='text/css' rel='stylesheet' href='css/main.css' media='screen' />
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery-ui.js"></script>
+<script src="js/Chart.js"></script>
 <script type="text/javascript">
 $(function() {
+    $('textarea').each(function() {
+        $(this).height($(this).prop('scrollHeight'));
+    });
+
     $(".popup").hide();
     $(".replybox").hide();
     $('#container').not(".popup").click(function(){
@@ -124,12 +129,21 @@ function toggleID(toggleid){
     <div id='forwords'>
     <article class='letter'>
         <div class='left'>
-        <h2 class='title'>제목입니다앙</h2>
-            <p class='date'>2013:20L23L23L:23</p>
-        asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>
+            <div class=replyonwrap>
+                <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
+            </div></div>
+        <textarea class='title' readonly>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군</textarea>
+        <textarea class='body' readonly>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
+            그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
+            그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
+            그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
+            그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
 
-        <br>
-        <a class='replycall' onclick="toggleID('replyboxno1');">댓글 (19개)</a>   <div class='pointbtnsym'>공감+</div><div class='pointbtnwow'>우와+</div><div class='pointbtnhum'>ㅋㅋ+</div>
+
+        </textarea>
+
+
+        <a class='replycall' onclick="toggleID('replyboxno1');">댓글 (19개)</a>   <a class='pointbtn'>공감+</a><a class='pointbtn'>우와+</a><a class='pointbtn'>ㅋㅋ+</a>
         <div class=replybox id=replyboxno1>
         <div class=replyonwrap>
             <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군<font class=replydate>그랫어</font></span>
@@ -148,7 +162,30 @@ function toggleID(toggleid){
         </div>
         <div class='right'>
 
-        <div class='writer'>written by 작성자</div>
+
+        <canvas id="radar" data-type="Radar" width="220" height="220"></canvas><br>
+        <script type="text/javascript">
+            var data = {
+                labels : ["공감","ㅋㅋ","우와","댓글","공유"],
+                datasets : [
+                    {
+                        fillColor : "rgba(151,187,205,0.5)",
+                        strokeColor : "rgba(151,187,205,1)",
+                        pointColor : "rgba(151,187,205,1)",
+                        pointStrokeColor : "#fff",
+                        data : [10,15,25,35,45]
+                    }
+                ]
+            }
+        </script>
+        <script src="js/chartforletter.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#radar").each(function(){
+                    eval("new Chart(this.getContext('2d'))." + $(this).data("type") + "(data,options);");
+                });
+            });
+        </script>
 
         </div>
 
@@ -179,3 +216,29 @@ function toggleID(toggleid){
 </div>
 
 
+
+
+
+<canvas id="radar2" data-type="Radar" width="150" height="150"></canvas><br></div>
+<script type="text/javascript">
+    var data2 = {
+        labels : ["공감","ㅋㅋ","우와","댓글","공유"],
+        datasets : [
+            {
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,1)",
+                pointColor : "rgba(151,187,205,1)",
+                pointStrokeColor : "#fff",
+                data : [100,00,00,00,100]
+            }
+        ]
+    }
+</script>
+<script src="js/chartforletter.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#radar2").each(function(){
+            eval("new Chart(this.getContext('2d'))." + $(this).data("type") + "(data2,options);");
+        });
+    });
+</script>
