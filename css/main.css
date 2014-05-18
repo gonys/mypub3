@@ -59,7 +59,7 @@ padding: 5px 0;
 background-color: #fff;
 box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 border: 1px solid #ccc;}
-.popup li{color:#777777;}
+.popup li{color:#777777;z-index: 5;}
 .popup li:hover{color:#000;background-color:#f4f4f4}
 
 /* 그룹팝업*/
@@ -74,11 +74,60 @@ border: 1px solid #ccc;}
 
 
 
+/* 네임스페이스*/
+#namespace{height:43px;border-bottom:1px solid #dddddd;width:100%; line-height: 43px;color:#777777 }
+#namewrap{width:900px; height:50px;margin:auto;position:relative;padding-left:20px;padding-right:20px;}
+
+/*그룹세팅 팝업*/
+#showgroupset{ float:right;cursor:hand;height:43px;width:43px;background-image: url(../icon/setting.png);background-size: 28px;background-repeat: no-repeat;background-position: center;}
+#showgroupset:hover{background-image: url(../icon/setting2.png)}
+#showgroupset ul{ float:right;margin-top:38px;margin-left:-160px}
+#showgroupset li{padding:0px 10px;width:180px;line-height:42px;}
+
+/*친구 팝업*/
+#showfriends{cursor: hand;}
+#showfriends:hover{color:#000;}
+#friends ul{ float:right;margin-top:-6px;margin-left:250px}
+#friends li{padding:0px 10px;width:180px;line-height:42px;}
+
+
+
 /* 본문 */
 #topblock{width:100%;height:47;clear:both;}
 #container{width:100%;}
+#wrapper{width:900px;margin:auto;overflow:auto;}
+#forwords{width:750px;float:left;position:relative}
+#best{width:150px;margin-left:750px;position:fixed; padding:10px}
 
-/* 네임스페이스*/
-#namespace{height:43px;border-bottom:1px solid #dddddd;width:100%; line-height: 43px;color:#777777 }
-#namewrap{width:940px; height:50px;margin:auto;position:relative}
 
+
+/*아티클*/
+.letter, .photo{border-bottom:1px solid #dddddd;width:750px;position:relative;padding-top:10px;padding-bottom:20px;overflow:auto; }
+.title{font-weight: 900;}
+.date{color:#777777;margin-top:-15px;font-size:12px;padding-left:15px;}
+.left{width:520px;float:left;position:relative}
+
+
+/*리플*/
+.replycall{padding-left:10px;cursor: hand; color:#777777}
+.replycall:hover{color:#000}
+.replybox{border-top:1px solid #dddddd;margin-top:5px;}
+.replywrap{overflow:auto;padding:3px;margin-left:35px;}
+.replyonwrap{overflow:auto;padding:5px;clear:both;}
+.profileimg{margin-right:4px;float:left;width:35px;height:35px;background-size:35px;background-repeat:no-repeat;}
+.reply{float:left;}
+.replydate{color:#777777;font-size: 12px;}
+
+.makereply{width:400px;height:35px;border:none;border-radius: 5px;padding:5px;}
+.makereply:hover,.makereply:focus,.makereply:active{border: 1px solid #dddddd;padding-left:4px;}
+
+
+
+/*포인트와 작성자*/
+.right{width:230px;float:left;position:relative;padding-top:20px;}
+.writer{background:url(../icon/sch.png) no-repeat;background-size:30px;line-height: 40px;height:40px;background-position:top right;width:150px;margin-right:10px;}
+.pointbtnsym{border:1px solid #dddddd;border-radius:3px 0px 0px 3px;padding:5px 10px}
+.pointbtnwow{border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;border-radius:0px;padding:5px 12px;}
+.pointbtnhum{border:1px solid #dddddd;border-radius:0px 3px 3px 0px;padding:5px 10px}
+.pointbtnwow,.pointbtnsym,.pointbtnhum{color:#777777;float:left;cursor:hand;}
+.pointbtnwow:hover,.pointbtnsym:hover,.pointbtnhum:hover{color:#000;}

@@ -5,6 +5,10 @@
 <script type="text/javascript">
 $(function() {
     $(".popup").hide();
+    $(".replybox").hide();
+    $('#container').not(".popup").click(function(){
+        $(".popup").hide();
+    });
     $('#more').click(function(){
         $(this).toggleClass("moreclicked")
     });
@@ -82,17 +86,96 @@ function toggleID(toggleid){
 </div>
 
 
-        <div id='container'>
+
         <div id='topblock'></div>
         <div id='namespace'>
             <div id='namewrap'>
-               안녕하세요. 박성호님 1번그룹입니다.     이 그룹의 친구목록 그룹설정
+               안녕하세요. 박성호님 1번그룹입니다.   <span id='showfriends' onclick="toggleID('friends');">여기</span>를 눌러 이 그룹의 친구들을 확인해 보세요.
+                <a id='showgroupset' onclick="toggleID('groupsetting');">
+                    <div class='popup' id='groupsetting'>
+                        <ul>
+                            <li>
+                                그룹5
+                            </li>
+                            <li>
+                                그룹6
+                            </li>
 
+                        </ul>
+                    </div>
+                </a>
+                <div class='popup' id='friends'>
+                    <ul>
+                        <li>
+                            그룹5
+                        </li>
+                        <li>
+                            그룹6
+                        </li>
 
+                    </ul>
+                </div>
             </div>
 
 
         </div>
+<div id='container'>
+    <div id=wrapper>
+    <div id='forwords'>
+    <article class='letter'>
+        <div class='left'>
+        <h2 class='title'>제목입니다앙</h2>
+            <p class='date'>2013:20L23L23L:23</p>
+        asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>
+
+        <br>
+        <a class='replycall' onclick="toggleID('replyboxno1');">댓글 (19개)</a>   <div class='pointbtnsym'>공감+</div><div class='pointbtnwow'>우와+</div><div class='pointbtnhum'>ㅋㅋ+</div>
+        <div class=replybox id=replyboxno1>
+        <div class=replyonwrap>
+            <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군<font class=replydate>그랫어</font></span>
+        </div></div>
+            <div class=replyonwrap>
+                <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
+            </div></div>
+            <div class=replyonwrap>
+                <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
+            </div></div>
+
+
+            <input class=makereply type='text' placeholder="댓글을 남겨주세요^-^">
+
         </div>
+        </div>
+        <div class='right'>
+
+        <div class='writer'>written by 작성자</div>
+
+        </div>
+
+    </article>
+
+    </div>
+    <div id='best'>
+
+        공감+글<br>
+        공감+글<br>
+        공감+글<br>
+        공감+글<br>
+        공감+글<br>
+        웃겨+글<br>
+        웃겨+글<br>
+        웃겨+글<br>
+        웃겨+글<br>
+        웃겨+글<br>
+        쩐다+글<br>
+        쩐다+글<br>
+        쩐다+글<br>
+        쩐다+글<br>
+        쩐다+글<br>
+
+    </div>
+</div>
+
+</div>
 
 
