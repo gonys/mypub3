@@ -103,12 +103,13 @@ border: 1px solid #ccc;}
 
 
 /*아티클*/
-.letter, .photo{border-bottom:1px solid #dddddd;width:750px;position:relative;padding-top:10px;padding-bottom:20px;overflow:auto; }
-.title{font-weight: 900;width:500;font-size:30px;cursor:default;}
+.letter{border-bottom:1px solid #dddddd;width:750px;position:relative;padding-top:10px;padding-bottom:20px;overflow:hidden;height:}
+.title{font-weight: 900;width:500;font-size:30px;cursor:default;height:40px;}
 .body{width:500px;font-size:15px;cursor:default;}
 
 .date{color:#777777;font-size:12px;padding-left:15px;}
-.left{width:520px;float:left;position:relative;overflow:hidden;}
+.letterleft{width:520px;float:left;position:relative;overflow:hidden;}
+
 
 
 /*리플*/
@@ -127,7 +128,13 @@ border: 1px solid #ccc;}
 
 
 /*포인트와 작성자*/
-.right{width:230px;float:left;position:relative;padding-top:20px;}
+.rightwrap{width:230px;height:100%}
+.easing{width:230px;position:absolute;margin-left:520px;margint-top:50px;}
 .writer{width:150px;margin-right:10px;}
 .pointbtn{color:#777777;cursor:hand;margin-left: 15px;}
 .pointbtn:hover{color:#000;}
+.pointbtnsym{border:1px solid #dddddd;border-radius:3px 0px 0px 3px;padding:5px 10px}
+.pointbtnwow{border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;border-radius:0px;padding:5px 12px;}
+.pointbtnhum{border:1px solid #dddddd;border-radius:0px 3px 3px 0px;padding:5px 10px}
+.pointbtnwow,.pointbtnsym,.pointbtnhum{color:#777777;float:left;cursor:hand;}
+.pointbtnwow:hover,.pointbtnsym:hover,.pointbtnhum:hover{background-color:#f4f4f4;color:#000;}
