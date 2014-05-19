@@ -33,7 +33,7 @@ var options= {
     scaleFontFamily : "'Arial'",
 
     //Number - Scale label font size in pixels
-    scaleFontSize : 6,
+    scaleFontSize : 10,
 
     //String - Scale label font weight style
     scaleFontStyle : "normal",
@@ -63,13 +63,13 @@ var options= {
     angleLineWidth : 1,
 
     //String - Point label font declaration
-    pointLabelFontFamily : "'Arial'",
+    pointLabelFontFamily : "'woori'",
 
     //String - Point label font weight
     pointLabelFontStyle : "normal",
 
     //Number - Point label font size in pixels
-    pointLabelFontSize : 10,
+    pointLabelFontSize : 14,
 
     //String - Point label font colour
     pointLabelFontColor : "#666",

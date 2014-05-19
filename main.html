@@ -3,6 +3,7 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/Chart.js"></script>
+<script src="js/stickyfloat.js"></script>
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
@@ -131,8 +132,10 @@ function toggleID(toggleid){
 
 
         </div>
+
 <div id='container'>
     <div id=wrapper>
+
     <div id='forwords'>
 
 
@@ -215,195 +218,23 @@ function toggleID(toggleid){
 
         </div>
 
-    </article>
-
-        <article class='letter'>
-            <div class='letterleft'>
-                <div class=replyonwrap>
-                    <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-                </div></div>
-                <textarea class='title' readonly>그랫군</textarea>
-                <p>
-                    <a class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img style="height:80px" src="1_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img style="height:80px" src="2_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img style="height:80px" src="3_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                    <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                </p>
-
-
-                <textarea class='body' readonly>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-                    그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그
-
-
-                </textarea>
-
-
-                <a class='replycall' onclick="toggleID('replyboxno1');">댓글 (19개)</a>
-                <div class=replybox id=replyboxno1>
-                    <div class=replyonwrap>
-                        <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군<font class=replydate>그랫어</font></span>
-                    </div></div>
-                    <div class=replyonwrap>
-                        <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-                    </div></div>
-                    <div class=replyonwrap>
-                        <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-                    </div></div>
-
-
-                    <input class=makereply type='text' placeholder="댓글을 남겨주세요^-^">
-
-                </div>
-            </div>
-
-            <div class='easing'>
-                <br><br>
-                <a class='pointbtnsym'>공감+</a><a class='pointbtnwow'>우와+</a><a class='pointbtnhum'>ㅋㅋ+</a>
-
-                <canvas id="radar" data-type="Radar" width="220" height="220"></canvas><br>
-                <script type="text/javascript">
-                    var data = {
-                        labels : ["공감","ㅋㅋ","우와","댓글","공유"],
-                        datasets : [
-                            {
-                                fillColor : "rgba(151,187,205,0.5)",
-                                strokeColor : "rgba(151,187,205,1)",
-                                pointColor : "rgba(151,187,205,1)",
-                                pointStrokeColor : "#fff",
-                                data : [10,15,25,35,45]
-                            }
-                        ]
-                    }
-                </script>
-                <script src="js/chartforletter.js"></script>
-                <script type="text/javascript">
-                    $(document).ready(function(){
-                        $("#radar").each(function(){
-                            eval("new Chart(this.getContext('2d'))." + $(this).data("type") + "(data,options);");
-                        });
-                    });
-                </script>
-
-            </div>
-
-        </article>
-
-
-    <article class='letter'>
-        <div class='letterleft'>
-            <div class=replyonwrap>
-                <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-            </div></div>
-            <textarea class='title' readonly>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군</textarea>
-            <p>
-                <a class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img style="height:80px" src="1_s.jpg" alt="" /></a>
-                <a class="fancybox" href="2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img style="height:80px" src="2_s.jpg" alt="" /></a>
-                <a class="fancybox" href="3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img style="height:80px" src="3_s.jpg" alt="" /></a>
-                <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-                <a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img style="height:80px" src="4_s.jpg" alt="" /></a>
-            </p>
-
-
-            <textarea class='body' readonly>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-                그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그
-
-
-
-                랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-                그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-                그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-                그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군
-
-
-            </textarea>
-
-
-            <a class='replycall' onclick="toggleID('replyboxno1');">댓글 (19개)</a>
-            <div class=replybox id=replyboxno1>
-                <div class=replyonwrap>
-                    <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군그랫군<font class=replydate>그랫어</font></span>
-                </div></div>
-                <div class=replyonwrap>
-                    <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-                </div></div>
-                <div class=replyonwrap>
-                    <a class='profileimg' style="background-image: url('icon/sch.png')"></a><div class=replywrap><span class=reply>그랫군</span><br><span class=replydate>그랫어</span>
-                </div></div>
-
-
-                <input class=makereply type='text' placeholder="댓글을 남겨주세요^-^">
-
-            </div>
-        </div>
-
-        <div class='easing'>
-            <br><br>
-            <a class='pointbtnsym'>공감+</a><a class='pointbtnwow'>우와+</a><a class='pointbtnhum'>ㅋㅋ+</a>
-
-            <canvas id="radar" data-type="Radar" width="220" height="220"></canvas><br>
-            <script type="text/javascript">
-                var data = {
-                    labels : ["공감","ㅋㅋ","우와","댓글","공유"],
-                    datasets : [
-                        {
-                            fillColor : "rgba(151,187,205,0.5)",
-                            strokeColor : "rgba(151,187,205,1)",
-                            pointColor : "rgba(151,187,205,1)",
-                            pointStrokeColor : "#fff",
-                            data : [10,15,25,35,45]
-                        }
-                    ]
-                }
-            </script>
-            <script src="js/chartforletter.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $("#radar").each(function(){
-                        eval("new Chart(this.getContext('2d'))." + $(this).data("type") + "(data,options);");
-                    });
-                });
-            </script>
-
-        </div>
 
     </article>
 
-    <script src='js/stickyfloat.js'></script>
-    <script>jQuery('.easing').stickyfloat({ duration: 0 });</script>
 
 
-
-
-    </div>
-    <div id='best'>
-
-        공감+글<br>
-        공감+글<br>
-        공감+글<br>
-        공감+글<br>
-        공감+글<br>
-        웃겨+글<br>
-        웃겨+글<br>
-        웃겨+글<br>
-        웃겨+글<br>
-        웃겨+글<br>
-        쩐다+글<br>
-        쩐다+글<br>
-        쩐다+글<br>
-        쩐다+글<br>
-        쩐다+글<br>
-
-    </div>
 </div>
+        <div id=best>
+            쪽지<br>
+            새친구<br>
+            BEST
+            <div id=symbest>공감</div>
+            <div id=wowbest>우와</div>
+            <div id=humbest>ㅋㅋ</div>
+        </div>
+
 
 </div>
 
 
-
+</div>
